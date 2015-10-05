@@ -26,7 +26,7 @@
         },
         "storageblobname": {
             "type": "string",
-            "defaultValue": "knazurestor100"
+            "defaultValue": "knazstorage100"
         },
         "storageaccountcontainername": {
             "type": "string",
@@ -64,11 +64,11 @@
     "resources": [
         {
             "apiVersion": "2015-05-01-preview",
-            "type": "Microsoft.Storage/StorageAccounts",
+            "type": "Microsoft.Storage/storageAccounts",
             "name": "[parameters('storageblobname')]",
             "location": "[parameters('location')]",
             "properties": {
-                "accounttype": "[variables('storagetype')]"
+                "accountType": "[variables('storagetype')]"
             }
         },
         {
@@ -195,7 +195,6 @@
         }
     ],
     "outputs": {
-
     }
 }
       
